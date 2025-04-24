@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { RouterLink, Router } from '@angular/router';
+import {Browser} from '@capacitor/Browser';
 
 @Component
 (
@@ -25,4 +26,15 @@ export class AthloneWesportBallinaPage implements OnInit
   {
     this.router.navigate(['/home']);
   }
+
+  openBrowser()
+  {
+    Browser.open
+    (
+      {
+        url: 'http://api.irishrail.ie/realtime/realtime.asmx/getAllStationsXML'
+      }
+    )
+  };
 }
+
