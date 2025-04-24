@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Train Station Timetables Across Ireland
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,24 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <h1>Select a train station you want to see a timetable for</h1>
+    <ul>
+      <button (click)="goToLimerickEnnis()" [routerLink]="['/limerick-ennis']" routerDirection="forward">Limerick -> Ennis Timetable</button>
+      <br>
+      <button (click)="goToAthloneWestportBallina()" [routerLink]="['/athlone-wesport-ballina']" routerDirection="forward">Athlone -> Westport/Ballina Timetable</button>
+      <br>
+      <button (click)="goToBallybrophyLimerick()" [routerLink]="['/ballybrophy-limerick']" routerDirection="forward">Ballybrophy -> Limerick Timetable</button>
+      <br>
+      <button (click)="goToCorkCobhMidleton()" [routerLink]="['/cork-cobh-midleton']" routerDirection="forward">Cork -> Cobh/Midleton Timetable</button>
+      <br>
+      <button (click)="goToDundalkBelfast()" [routerLink]="['/dundalk-belfast']" routerDirection="forward">Dundalk -> Belfast Timetable</button>
+      <br>  
+      <button (click)="goToLimerickWaterford()" [routerLink]="['/limerick-waterford']" routerDirection="forward">Limerick -> Waterford Timetable</button>
+    </ul>
   </div>
 </ion-content>
